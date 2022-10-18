@@ -2,4 +2,5 @@
 
 void main(){
   int a=0;
+  f=file.read("Resume.txt",'r')
 }
