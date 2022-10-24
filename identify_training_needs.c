@@ -2,5 +2,7 @@
 
 void main(){
   int a=0;
-  f=file.read("Resume.txt",'r')
+  f=file.read("Resume.txt",'r');
+print("first update");
+
 }
