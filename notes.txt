@@ -21,7 +21,7 @@ tables:
 cols:  user id (primary key),password,name,user type(admin,hr,employee(patron))
 
 2) training (specified by the HR)
-cols: skillset required(comma seperated),the required training to be provided to the emmployees.
+cols: employee id,role id , role name,skillset required(comma seperated),the required training to be provided to the emmployees.
 
 3) schedule
 cols: emplyee id,the required training to be provided to the emmployees,start date , end date ,test link for attending.
