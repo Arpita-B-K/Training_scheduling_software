@@ -1,0 +1,38 @@
+Initialy we get a option of using the tkinter GUI or the command line interface
+
+user login types are : employee(patron),HR,admin 
+
+patron:
+display corresponding schedules 
+and have a option of entry of data
+
+HR:
+Has the previlage in changing the skill set and the required training for the partron
+
+admin:
+provided with the UI to view specific data.
+
+always being provided with the option of log out.
+-------------------------------------------------------
+data being stored in mysql
+
+tables:
+1) Credential 
+cols:  user id (primary key),password,name,user type(admin,hr,employee(patron))
+
+2) training (specified by the HR)
+cols: skillset required(comma seperated),the required training to be provided to the emmployees.
+
+3) schedule
+cols: emplyee id,the required training to be provided to the emmployees,start date , end date ,test link for attending.
+
+4) user logs 
+cols:user id,name,logdate,login time, logout time.
+-------------------------------------------------------
+
+files that would be created :
+
+1)tkinter-gui file( user interface ).
+2)command line (user interface).
+3)dbms file for storing.
+4)schedule algorithm part.
