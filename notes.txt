@@ -24,7 +24,7 @@ cols:  user id (primary key),password,name,user type(admin,hr,employee(patron))
 cols: skillset required(comma seperated),the required training to be provided to the emmployees.
 
 3) schedule
-cols: emplyee id,the required training to be provided to the emmployees,start date , end date ,test link for attending.
+cols: sch_id,emplyee id,the required training to be provided to the emmployees,start date , end date ,test link for attending.
 
 4) user logs 
 cols:user id,name,logdate,login time, logout time.
