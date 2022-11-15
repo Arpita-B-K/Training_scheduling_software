@@ -24,7 +24,7 @@ def HRs_data_modify(skills,training,mode):
     # for 2 return false if not present and handle the event properly ,return True if succesfull deletion
     pass
 
-def get_training(skills,training):
+def get_training(skills):
     #returns training corresponding to the skills mentioned from the training table
     pass
 
