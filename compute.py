@@ -1,9 +1,67 @@
-def check_presence(id, pas, type):
-    # dbms part this will check if the tupel is presnt in the database or not
+
+
+def sort_fun(sk):
+    l=[]
+    for ele in sk:
+        if(ele != ','){
+            l.append(int(ele))
+        }
+    l = l.sort()
+    return l
+        
+        
+
+def create_sch():
+    print("enter the skill set number seperated by commas")
+    skills=""
+    print("1)python  2)C  3)C++   4)ruby")
+    print("5)algorithms    6)machine-learning    7)datascience  8)Bigdata")
+    print("9)leadership-qualities   10)supportive-member  ")
+    s = input("enter number (to stop enter \'q\'): ")
+    skills = skills+s+","
+    while(s != 'q'):
+            s = input("enter number (to stop enter \'q\'): ")
+            skills = skills+s+","
+    sort_fun(skills)            
+    get_training(skills)
+
+def print_sch():
     pass
 
-def user_dashboard_cli(user_id):
+def print_det_sch():
     pass
+
+
+
+def route(choice):
+    if(choice == "1"):
+        create_sch()
+    elif(choice =="2"):
+        print_sch()
+    elif(choice =="3"):
+        print_det_sch()
+    elif(choice == "logout"):
+        print("*******************logging out ************************")
+        exit()
+        
+
+
+
+def user_dashboard_cli(user_id):
+    print("Welcome to "+user_id+"'s schedule keeper")
+    print("if you want to get a training, giving a new skill set? please enter 1") 
+    print("if you want to get info of your schedules enter 2")
+    print("if you want to get a detaile information of your schedules enter 3")
+    print("enter \"logout\" to logout")
+    
+    choice = input("your choice : ")
+    route(choice)
+    while(choice != "logout"):
+        print("________________________________________________________")
+        choice = input("your choice : ")
+        route(choice)
+        
+    
 
 def input_through_cli(n):
     reg_or_login = input("to login enter l and to register enter r")
@@ -14,20 +72,46 @@ def input_through_cli(n):
             user_id = input("please input your user ID :")
             password = input("please input your password :")
             user_type = input("please enter the user type(emp/hr/admin) :")
-            if (check_presence(user_id, password, user_type)):
+            if (check_validity(user_id, password, user_type)):
                 flag = 0
                 user_dashboard_cli(user_id)
             else:
+                print("------------------------------------------------")
+                print("This inputs are wrong so please input again\n")
                 count += 1
                 
         if(count >=4):
             print("***************************************************************************")
             print("************************* wrong credentials *******************************")
             print("************************** !terminating! **********************************")
+            print("***************************************************************************")
             exit()
             
     elif reg_or_login == 'r':
-        pass
+        flag = 1
+        count = 1
+        while flag and count<4:
+            user_id = input("please input your user ID :")
+            password = input("please input your password :")
+            user_type = input("please enter the user type(emp/hr/admin) :")
+            if (not(check_presence(user_id, password, user_type))):
+                flag = 0
+                print("-------------------------------------------------------------")
+                print("the details are valid and you can use this cred further.")
+                print("Succesfully Registered")
+                print("-------------------------------------------------------------")
+                user_dashboard_cli(user_id)
+            else:
+                print("------------------------------------------------")
+                print("The user id is begin used \n")
+                count += 1
+                
+        if(count >=4):
+            print("***************************************************************************")
+            print("************************* invalid credentials *****************************")
+            print("************************** !terminating! **********************************")
+            print("***************************************************************************")
+            exit()
     else:
         if(n >= 4):
             exit()
