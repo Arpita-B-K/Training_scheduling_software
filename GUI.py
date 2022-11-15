@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import ImageTk, Image
 
 class window(Tk):
 	def __init__(self):
@@ -176,7 +175,7 @@ class signin_page(LabelFrame):
 class main_page(LabelFrame):
 	def __init__(self, master):
     	#creating  a new frame
-		LabelFrame(width=600, height=600).__init__(self, master)
+		LabelFrame.__init__(self, master)
 		#display TASK LISt text
 		Label(self, text="Task list", width=10, font=('Helvetica 14 underline')).grid(row=2, column=1)
 		#empty space
