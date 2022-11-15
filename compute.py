@@ -3,9 +3,8 @@
 def sort_fun(sk):
     l=[]
     for ele in sk:
-        if(ele != ','){
+        if(ele != ','):
             l.append(int(ele))
-        }
     l = l.sort()
     return l
         
