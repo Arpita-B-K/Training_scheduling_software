@@ -34,3 +34,7 @@ def schedule(emp_id,training,startdate,enddate,testlink):
 
 def get_schedule(emp_id):
     pass
+
+def check_presence(emp_id):
+    #same as check_validity but here it checks only if the user id is present in the table
+    pass
