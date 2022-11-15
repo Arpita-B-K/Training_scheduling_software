@@ -5,8 +5,12 @@ def sort_fun(sk):
     for ele in sk:
         if(ele != ','):
             l.append(int(ele))
-    l = l.sort()
-    return l
+    l.sort()
+    sk=""
+    for ele in l:
+        sk=sk+str(ele)+","
+    return sk
+    
         
         
 
