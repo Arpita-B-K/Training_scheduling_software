@@ -1,4 +1,4 @@
-def get_training():
-    pass
+def compute_training(skill_set):
+    
 
 def get_
