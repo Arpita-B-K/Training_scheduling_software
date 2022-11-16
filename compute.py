@@ -1,5 +1,10 @@
 
+def compute_training(skill_set):
+    pass
+
 def get_training():
+    pass
+
 def sort_fun(sk):
     l=[]
     for ele in sk:
