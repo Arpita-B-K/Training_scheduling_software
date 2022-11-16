@@ -10,9 +10,6 @@ def sort_fun(sk):
     for ele in l:
         sk=sk+str(ele)+","
     return sk
-    
-        
-        
 
 def create_sch():
     print("enter the skill set number seperated by commas")
