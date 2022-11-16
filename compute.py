@@ -1,5 +1,3 @@
-
-
 def sort_fun(sk):
     l=[]
     for ele in sk:

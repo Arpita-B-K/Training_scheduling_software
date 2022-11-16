@@ -182,7 +182,7 @@ class main_page(LabelFrame):
 		Label(self, text="").grid(row=3, column=1)	
 		#buttons lists of task list	
 		task_list = []
-		task_list.append("Task1")
+		#task_list.append("Task1")
 		task_list.append("Task2")
 		task_list.append("Task3")
 		task_list.append("Task4")
