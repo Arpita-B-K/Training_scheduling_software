@@ -35,7 +35,7 @@ q5='create table user_logs(user_id varchar(10),name varchar(30),logdate date,log
 mycursor.execute(q5)
 
 # skillset required(comma seperated),the required training to be provided to the emmployees.
-q6='create table training(employee_id varchar(10),role_id varchar(10),role_name varchar(30),skillset_required tinytext,training_required tinytext,primary key(employee_id,role_id))'
+q6='create table training(employee_id varchar(10),skillset_required tinytext,training_required tinytext,primary key(employee_id,role_id))'
 mycursor.execute(q6)
 
 #closing the connection
