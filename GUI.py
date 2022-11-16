@@ -183,9 +183,9 @@ class main_page(LabelFrame):
 		#buttons lists of task list	
 		task_list = []
 		#task_list.append("Task1")
-		task_list.append("Task2")
-		task_list.append("Task3")
-		task_list.append("Task4")
+		#task_list.append("Task2")
+		#task_list.append("Task3")
+		#task_list.append("Task4")
 		for i in range(len(task_list)):
 			Button(self, text=task_list[i], width=10, font=('Helvetica 10 bold')).grid(row=4+i, column=1)
 
