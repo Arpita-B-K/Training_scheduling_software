@@ -44,17 +44,15 @@ def route(choice):
     elif(choice == "logout"):
         print("*******************logging out ************************")
         exit()
-        
 
 
-
-def user_dashboard_cli(user_id):
+def emp_dashboard_cli(user_id):
     print("Welcome to "+user_id+"'s schedule keeper")
     print("if you want to get a training, giving a new skill set? please enter 1") 
     print("if you want to get info of your schedules enter 2")
     print("if you want to get a detaile information of your schedules enter 3")
     print("enter \"logout\" to logout")
-    
+
     choice = input("your choice : ")
     route(choice)
     while(choice != "logout"):
@@ -75,7 +73,12 @@ def input_through_cli(n):
             user_type = input("please enter the user type(emp/hr/admin) :")
             if (check_validity(user_id, password, user_type)):
                 flag = 0
-                user_dashboard_cli(user_id)
+                if(user_type == "emp"):
+                        emp_dash_cli(user_id)
+                elif(user_type == "hr"):
+                    hr_dash_cli(user_id)
+                elif(user_type == "admin"):
+                    adm_dash_cli(user_id)
             else:
                 print("------------------------------------------------")
                 print("This inputs are wrong so please input again\n")

@@ -16,10 +16,15 @@ def input_through_cli(n):
             else:
                 if (check_validity(user_id, password, user_type)):
                     flag = 0
-                    user_dashboard_cli(user_id)
+                    if(user_type == "emp"):
+                        emp_dash_cli(user_id)
+                    elif(user_type == "hr"):
+                        hr_dash_cli(user_id)
+                    elif(user_type == "admin"):
+                        adm_dash_cli(user_id)
                 else:
                     print("------------------------------------------------")
-                    print("This inputs are wrong so please input again\n")
+                    print("This inputs are wrong \n")
                     count += 1
                 
         if(count >= 4):
