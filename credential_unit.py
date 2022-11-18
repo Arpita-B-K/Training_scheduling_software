@@ -75,5 +75,5 @@ def input_through_cli(n):
         input_through_cli(n+1)
 
 
-if __name__=="__main__":
-    input_through_cli(1)
+# if __name__=="__main__":
+#     input_through_cli(1)

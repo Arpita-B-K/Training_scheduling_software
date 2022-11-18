@@ -11,36 +11,39 @@ def sort_fun(sk):
     
         
 
-def create_sch():
-    print("enter the skill set number seperated by commas")
-    skills=""
-    print("1)python  2)C  3)C++   4)ruby")
-    print("5)algorithms    6)machine-learning    7)datascience  8)Bigdata")
-    print("9)leadership-qualities   10)supportive-member  ")
-    s = input("enter number (to stop enter \'q\'): ")
-    skills = skills+s+","
-    while(s != 'q'):
-            s = input("enter number (to stop enter \'q\'): ")
-            skills = skills+s+","
-    sort_fun(skills)            
-    compute_training(skills)
-    print("schedule is been created \n")
+# def create_sch(): # schedule creation
+#     print("enter the skill set number seperated by commas")
+#     skills=""
+#     print("1)python  2)C  3)C++   4)ruby")
+#     print("5)algorithms    6)machine-learning    7)datascience  8)Bigdata")
+#     print("9)leadership-qualities   10)supportive-member  ")
+#     s = input("enter number (to stop enter \'q\'): ")
+#     skills = skills+s+","
+#     while(s != 'q'):
+#             s = input("enter number (to stop enter \'q\'): ")
+#             skills = skills+s+","
+#     sort_fun(skills)
+#     compute_training(skills)
+#     print("schedule is been created \n")
 
-def print_sch():
-    
 
+def print_sch(user_id):
+    sched =  get_schedule(user_id)
+    for sch in sched:
+        #display in the screen 
+        
 def print_det_sch():
     pass
 
 
 
-def route(choice):
+def route(choice,user_id):
     if(choice == "1"):
-        create_sch()
+        create_sch(user_id)
     elif(choice =="2"):
-        print_sch()
+        print_sch(user_id)
     elif(choice =="3"):
-        print_det_sch()
+        print_det_sch(user_id)
     elif(choice == "logout"):
         print("*******************logging out ************************")
         exit()
@@ -54,7 +57,7 @@ def emp_dashboard_cli(user_id):
     print("enter \"logout\" to logout")
 
     choice = input("your choice : ")
-    route(choice)
+    route(choice,user_id)
     while(choice != "logout"):
         print("________________________________________________________")
         choice = input("your choice : ")
@@ -74,7 +77,7 @@ def input_through_cli(n):
             if (check_validity(user_id, password, user_type)):
                 flag = 0
                 if(user_type == "emp"):
-                        emp_dash_cli(user_id)
+                    emp_dash_cli(user_id)
                 elif(user_type == "hr"):
                     hr_dash_cli(user_id)
                 elif(user_type == "admin"):
@@ -118,6 +121,10 @@ def input_through_cli(n):
             exit()
     else:
         if(n >= 4):
+            print("***************************************************************************")
+            print("************************ invalid login type *******************************")
+            print("************************** !terminating! **********************************")
+            print("***************************************************************************")
             exit()
         print("invalid input ")
         input_through_cli(n+1)
