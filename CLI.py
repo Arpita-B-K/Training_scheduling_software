@@ -63,6 +63,7 @@ def emp_dashboard_cli(user_id):
         choice = input("your choice : ")
         route(choice)
         
+def 
     
 
 def input_through_cli(n):
@@ -107,7 +108,7 @@ def input_through_cli(n):
                 print("the details are valid and you can use this cred further.")
                 print("Succesfully Registered")
                 print("-------------------------------------------------------------")
-                user_dashboard_cli(user_id)
+                reg_dashboard_cli(user_id)
             else:
                 print("------------------------------------------------")
                 print("The user id is begin used \n")
