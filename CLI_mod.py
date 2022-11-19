@@ -1,5 +1,6 @@
 #from test_stub import *
-
+import numpy as np
+import pandas as pd
 def sort_fun(sk):
     l=[]
     for ele in sk:
@@ -12,18 +13,22 @@ def sort_fun(sk):
     return sk
 
 def print_sch(user_id):
+    # assuming that the get_sched returns []
     sched =  get_schedule(user_id)
-    for sch in sched:
-        #display in the cmd
-        print("")
-    pass
-        
-def print_det_sch():
-    pass
+    df = pd.DataFrame(np.array(sched))
+    #df.columns = []
+    print(df)    
+    
+def print_det_sch(user_id):
+    # assuming that the get_sched returns []
+    sched =  get_schedule(user_id)
+    df = pd.DataFrame(np.array(sched))
+    #df.columns = []
+    print(df)   
 
 
 
-def route(choice,user_id):
+def emp_route(choice,user_id):
     if(choice == "1"):
         create_sch(user_id)
     elif(choice =="2"):
@@ -35,7 +40,7 @@ def route(choice,user_id):
         exit()
 
 
-def emp_dashboard_cli(user_id):
+def emp_dash_cli(user_id):
     print("Welcome to "+user_id+"'s  schedule keeper")
     print("if you want to get a training, giving a new skill set? please enter 1") 
     print("if you want to get info of your schedules enter 2")
@@ -43,11 +48,28 @@ def emp_dashboard_cli(user_id):
     print("enter \"logout\" to logout")
 
     choice = input("your choice : ")
-    route(choice,user_id)
+    emp_route(choice,user_id)
     while(choice != "logout"):
         print("________________________________________________________")
         choice = input("your choice : ")
-        route(choice)
+        emp_route(choice)
+    emp_route(choice)
+
+def adm_dash_cli(user_id):
+    print("please enter 1 to print logs of all users")
+    print("please enter 2 to print the details of a particular employee")
+    print("please enter 3 to print the details of the courses decided by the HR for training")
+    
+    choice = input("your choice : ")
+    adm_route(choice,user_id)
+    while(choice != "logout"):
+        print("________________________________________________________")
+        choice = input("your choice : ")
+        adm_route(choice)
+    adm_route(choice)
+
+def hr_dash_cli(user_id):
+    pass
 
 
 def input_through_cli(n):
