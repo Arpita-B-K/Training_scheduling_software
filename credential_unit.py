@@ -24,7 +24,7 @@ def input_through_cli(n):
                         adm_dash_cli(user_id)
                 else:
                     print("------------------------------------------------")
-                    print("This inputs are wrong so please input again\n")
+                    print("This inputs are wrong \n")
                     count += 1
                 
         if(count >= 4):
@@ -75,5 +75,5 @@ def input_through_cli(n):
         input_through_cli(n+1)
 
 
-if __name__=="__main__":
-    input_through_cli(1)
+# if __name__=="__main__":
+#     input_through_cli(1)
