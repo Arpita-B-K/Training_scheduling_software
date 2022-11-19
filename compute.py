@@ -2,7 +2,7 @@
 def compute_training(skill_set):
     pass
 
-def get_training():
+def get_training(): #function that extracts information from the DBMS of all employees
     pass
 
 def sort_fun(sk):
@@ -33,4 +33,4 @@ def create_sch():
 def print_sch():
     pass
 
-def get_
+# def get_

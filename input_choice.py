@@ -1,6 +1,6 @@
 
-from CLI import *
-#from GUI import *
+from CLI_mod import *
+from GUI_backend import *
 
 def input_choice():
     cli_types = ["CLI", "Cli", "cli", "cLi", "clI", "CLi", "ClI", "cLI"]
@@ -11,10 +11,10 @@ def input_choice():
         print("\n")
         if choice in gui_types:
             flag = 0
-            # input_through_gui()
+            input_through_gui()
         elif choice in cli_types:
             flag = 0
-            
+            input_through_cli()
         else:
             print("invalid Input  !! ")
 

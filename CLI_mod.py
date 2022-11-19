@@ -1,3 +1,5 @@
+#from test_stub import *
+
 def sort_fun(sk):
     l=[]
     for ele in sk:
@@ -8,8 +10,6 @@ def sort_fun(sk):
     for ele in l:
         sk=sk+str(ele)+","
     return sk
-    
-        
 
 # def create_sch(): # schedule creation
 #     print("enter the skill set number seperated by commas")
@@ -30,7 +30,9 @@ def sort_fun(sk):
 def print_sch(user_id):
     sched =  get_schedule(user_id)
     for sch in sched:
-        #display in the screen 
+        #display in the cmd
+        print("")
+    pass
         
 def print_det_sch():
     pass
@@ -62,9 +64,7 @@ def emp_dashboard_cli(user_id):
         print("________________________________________________________")
         choice = input("your choice : ")
         route(choice)
-        
-def
-    
+
 
 def input_through_cli(n):
     reg_or_login = input("to login enter l and to register enter r")
@@ -129,3 +129,9 @@ def input_through_cli(n):
             exit()
         print("invalid input ")
         input_through_cli(n+1)
+
+
+
+
+# if __name__=="__main__":
+#     input_through_cli(1)
