@@ -2,7 +2,7 @@ First we start by designing a database
 
 DATABASE:
 credentials(user_id,name,password,user_type)
-user_logs(user_id,password,login_date,login_time,logout_time)
+#user_logs(user_id,password,login_date,login_time,logout_time)
 job(role_id,role_name,skills_required)
 employee(emp_id,name,role_id,skillset)
 training(skill,training,test,parscore)  
@@ -16,9 +16,7 @@ training - pk(skill)
 schedule - pk(emp_id,training)
 
 ACCESS:
-We create 2 users - Employee and HR
-CREATE USER 'employee'@'localhost' IDENTIFIED BY 'employee';
-CREATE USER 'hr'@'localhost' IDENTIFIED BY 'hr';
+We have 2 users - Employee and HR
 
 then we grant differnt permissions to each
 1.Employee
