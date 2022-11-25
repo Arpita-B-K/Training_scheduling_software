@@ -3,7 +3,7 @@ create database Training_software;
 create user Ajith indentified by 'Ashokde0314'
 create user hr01 indentified by 'hr01'
 
-credentials(user_id,name,password,user_type)
+credentials(user_id,name,password,user_type,)
 -- user_logs(user_name,password,login_date,login_time,logout_time)
 job(role_id,role_name,skills_required)
 employee(emp_id,name,role_id,skillset)

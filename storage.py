@@ -1,15 +1,10 @@
-def create_tables():
-    #statements for crete table
-    #statements for insert operations
-    pass
-
     
 def add_cred(user_id,password,type):
     #adds the tuple to credentials table
     pass
 
 
-def check_validity(user_id,password,type):
+def check_validity(user_id,password,test,parsecore):
     #if the tupe is present in the table credentials returns True otherwise False
     pass
 
@@ -28,7 +23,7 @@ def get_training(skills):
     #returns training corresponding to the skills mentioned from the training table
     pass
 
-def schedule(emp_id,training,startdate,enddate,testlink):
+def schedule(emp_id,training,startdate,enddate,testlink,score):
     #inserts the tuple in the schedule table
     pass
 
