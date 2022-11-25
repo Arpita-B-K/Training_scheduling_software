@@ -227,7 +227,7 @@ class main_page(LabelFrame):
 		Button(self, text="Logout", bg="blue", fg="white", borderwidth=4,
                        relief=GROOVE, command=lambda: master.switch_frame(signin_page), font=('Helvetica 10 bold')).grid(row=9, column=5)
 
-if __name__=="__main__":
-	app = window()
-	app.geometry("500x500")
-	app.mainloop()
+# if __name__=="__main__":
+# 	app = window()
+# 	app.geometry("500x500")
+# 	app.mainloop()
